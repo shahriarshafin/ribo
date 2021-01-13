@@ -1,0 +1,1767 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="component_event" id="jE$m^0dTkuRTbY(i_h7!" x="-2590" y="-5490">
+    <mutation component_type="AccelerometerSensor" is_generic="false" instance_name="Accelerometer_Sensor1" event_name="Shaking"></mutation>
+    <field name="COMPONENT_SELECTOR">Accelerometer_Sensor1</field>
+    <statement name="DO">
+      <block type="component_method" id="|2D]nhc=k;#xXoV^f`FQ">
+        <mutation component_type="SpeechRecognizer" method_name="GetText" is_generic="false" instance_name="Speech_Recognizer1"></mutation>
+        <field name="COMPONENT_SELECTOR">Speech_Recognizer1</field>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="{WDO;,H!;@HYhy3XFnpJ" x="-2590" y="-5410">
+    <mutation component_type="Button" is_generic="false" instance_name="Button1" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">Button1</field>
+    <statement name="DO">
+      <block type="component_method" id="^|2c!~]^Sq%pjgx$bSjr">
+        <mutation component_type="SpeechRecognizer" method_name="GetText" is_generic="false" instance_name="Speech_Recognizer1"></mutation>
+        <field name="COMPONENT_SELECTOR">Speech_Recognizer1</field>
+        <next>
+          <block type="component_method" id="]|X|V-$$Iso_#$}k{bqJ">
+            <mutation component_type="Player" method_name="Stop" is_generic="false" instance_name="Player1"></mutation>
+            <field name="COMPONENT_SELECTOR">Player1</field>
+            <next>
+              <block type="component_set_get" id="d8hA2_O!V?{ibC)(^C9k">
+                <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Label2"></mutation>
+                <field name="COMPONENT_SELECTOR">Label2</field>
+                <field name="PROP">Text</field>
+                <value name="VALUE">
+                  <block type="text" id="aPOUH@:kQf.5J18@K@kk">
+                    <field name="TEXT">---</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="component_set_get" id="GkT*o!0dM7MXg|-_Ou@o">
+                    <mutation component_type="Image" set_or_get="set" property_name="Visible" is_generic="false" instance_name="Image2"></mutation>
+                    <field name="COMPONENT_SELECTOR">Image2</field>
+                    <field name="PROP">Visible</field>
+                    <value name="VALUE">
+                      <block type="logic_boolean" id="FLC(Y^F@uj8?ZL`e}8LP">
+                        <field name="BOOL">FALSE</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="component_set_get" id="N.BMOn1b-g`l*@Yji+s0">
+                        <mutation component_type="GoogleMap" set_or_get="set" property_name="Visible" is_generic="false" instance_name="Google_Maps1"></mutation>
+                        <field name="COMPONENT_SELECTOR">Google_Maps1</field>
+                        <field name="PROP">Visible</field>
+                        <value name="VALUE">
+                          <block type="logic_boolean" id="E2ttpmaeF!MU@jI]S|)J">
+                            <field name="BOOL">FALSE</field>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="^_YO0NS4Xz?M5e6Tl~nm" x="-2592" y="-5238">
+    <mutation component_type="SpeechRecognizer" is_generic="false" instance_name="Speech_Recognizer1" event_name="AfterGettingText" vertical_parameters="true"></mutation>
+    <field name="COMPONENT_SELECTOR">Speech_Recognizer1</field>
+    <statement name="DO">
+      <block type="component_set_get" id="e/W+pJq|+E;(FifTjUV[">
+        <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Label1"></mutation>
+        <field name="COMPONENT_SELECTOR">Label1</field>
+        <field name="PROP">Text</field>
+        <value name="VALUE">
+          <block type="component_set_get" id="!t8Se|q-P_)vWMI,u#rh">
+            <mutation component_type="SpeechRecognizer" set_or_get="get" property_name="Result" is_generic="false" instance_name="Speech_Recognizer1"></mutation>
+            <field name="COMPONENT_SELECTOR">Speech_Recognizer1</field>
+            <field name="PROP">Result</field>
+          </block>
+        </value>
+        <next>
+          <block type="controls_if" id="PR_xEf/tx-R@N=hn9p_O">
+            <mutation elseif="48" else="1"></mutation>
+            <value name="IF0">
+              <block type="logic_operation" id="]kFBiP4{8ciZqH:/m84X">
+                <mutation items="2"></mutation>
+                <field name="OP">OR</field>
+                <value name="A">
+                  <block type="text_contains" id="O39C~gIDVE?us8oKzWcK">
+                    <value name="TEXT">
+                      <block type="component_set_get" id="~$AhJ~N}(]7(gmD6{S{p">
+                        <mutation component_type="Label" set_or_get="get" property_name="Text" is_generic="false" instance_name="Label1"></mutation>
+                        <field name="COMPONENT_SELECTOR">Label1</field>
+                        <field name="PROP">Text</field>
+                      </block>
+                    </value>
+                    <value name="PIECE">
+                      <block type="text" id="puJTI4C!}Ou/hW/a811=">
+                        <field name="TEXT">তোমার নাম</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="logic_operation" id="n|ve%j{RGPUy2h1Ah8uR">
+                    <mutation items="2"></mutation>
+                    <field name="OP">OR</field>
+                    <value name="A">
+                      <block type="text_contains" id="iR:P?0hhm:s6FQ9M|/v=">
+                        <value name="TEXT">
+                          <block type="component_set_get" id="g;|ed[%5r:{(e;EXBg*_">
+                            <mutation component_type="Label" set_or_get="get" property_name="Text" is_generic="false" instance_name="Label1"></mutation>
+                            <field name="COMPONENT_SELECTOR">Label1</field>
+                            <field name="PROP">Text</field>
+                          </block>
+                        </value>
+                        <value name="PIECE">
+                          <block type="text" id=",hs-gtO9pJ^X:S51}uD:">
+                            <field name="TEXT">নাম কি</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="logic_operation" id="g[VbA#{TG2^S|VyVm86Y">
+                        <mutation items="2"></mutation>
+                        <field name="OP">OR</field>
+                        <value name="A">
+                          <block type="logic_compare" id="5W6}@Mt,V*d~KZA0Pm{q">
+                            <field name="OP">EQ</field>
+                            <value name="A">
+                              <block type="component_set_get" id="Zr)-,,},a`Ehs}oI-!~A">
+                                <mutation component_type="Label" set_or_get="get" property_name="Text" is_generic="false" instance_name="Label1"></mutation>
+                                <field name="COMPONENT_SELECTOR">Label1</field>
+                                <field name="PROP">Text</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="text" id="g|bV|OS;e{+JdXD9_73m">
+                                <field name="TEXT">কি নাম তোমার</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="text_contains" id="{|hEcE)N^*iL;^lIFrAD">
+                            <value name="TEXT">
+                              <block type="component_set_get" id="Aty4Zj,X_%Y|!.M5QeSM">
+                                <mutation component_type="Label" set_or_get="get" property_name="Text" is_generic="false" instance_name="Label1"></mutation>
+                                <field name="COMPONENT_SELECTOR">Label1</field>
+                                <field name="PROP">Text</field>
+                              </block>
+                            </value>
+                            <value name="PIECE">
+                              <block type="text" id="YVoW-!@MvM@B~eiQ:n^A">
+                                <field name="TEXT">কি নাম</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="component_set_get" id="]{EdIb8n0E6OoY?wEpT{">
+                <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Label2"></mutation>
+                <field name="COMPONENT_SELECTOR">Label2</field>
+                <field name="PROP">Text</field>
+                <value name="VALUE">
+                  <block type="text" id="`4MN]P3%do8X%qlN|*@E">
+                    <field name="TEXT">আমার নাম রিবো</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="component_set_get" id="wwf3D@_kj_qr-E*S/J6s">
+                    <mutation component_type="Player" set_or_get="set" property_name="Source" is_generic="false" instance_name="Player1"></mutation>
+                    <field name="COMPONENT_SELECTOR">Player1</field>
+                    <field name="PROP">Source</field>
+                    <value name="VALUE">
+                      <block type="lists_pick_random_item" id="LT(79izJImLj8tFOu:~k">
+                        <value name="LIST">
+                          <block type="lists_create_with" id="PZEVOJGMvwANH9T|Rr40">
+                            <mutation items="2"></mutation>
+                            <value name="ADD0">
+                              <block type="text" id="Js/aQk3_Uc4.B0wa(4VB">
+                                <field name="TEXT">/storage/emulated/0/Ribo/tomar_nam.mp3</field>
+                              </block>
+                            </value>
+                            <value name="ADD1">
+                              <block type="text" id="||=asapPT~;VzC5eU`G[">
+                                <field name="TEXT">/storage/emulated/0/Ribo/tomar_nam.mp3</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="component_method" id="J.gSwwo7p@ad0M$gAn_E">
+                        <mutation component_type="Player" method_name="Start" is_generic="false" instance_name="Player1"></mutation>
+                        <field name="COMPONENT_SELECTOR">Player1</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <value name="IF1">
+              <block type="logic_operation" id="8T,`7/[uKVaw.RU{`IOc">
+                <mutation items="2"></mutation>
+                <field name="OP">OR</field>
+                <value name="A">
+                  <block type="text_contains" id="i55$qrAaxXJLb!xlG(*b">
+                    <value name="TEXT">
+                      <block type="component_set_get" id="jXIPdR,J:XlPk1IK%M?s">
+                        <mutation component_type="Label" set_or_get="get" property_name="Text" is_generic="false" instance_name="Label1"></mutation>
+                        <field name="COMPONENT_SELECTOR">Label1</field>
+                        <field name="PROP">Text</field>
+                      </block>
+                    </value>
+                    <value name="PIECE">
+                      <block type="text" id="sHjU=o?7pXN$Tp$phZeM">
+                        <field name="TEXT">কেমন আছো</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="logic_operation" id="D7kR9O.g1+$l~QVq,1YY">
+                    <mutation items="2"></mutation>
+                    <field name="OP">OR</field>
+                    <value name="A">
+                      <block type="text_contains" id="3qB:z1o5S5`cBdo,am5h">
+                        <value name="TEXT">
+                          <block type="component_set_get" id="gyxx.Q^LSsR,XDXMH!Se">
+                            <mutation component_type="Label" set_or_get="get" property_name="Text" is_generic="false" instance_name="Label1"></mutation>
+                            <field name="COMPONENT_SELECTOR">Label1</field>
+                            <field name="PROP">Text</field>
+                          </block>
+                        </value>
+                        <value name="PIECE">
+                          <block type="text" id="FSHvQ|qeg__/1csrRQ:=">
+                            <field name="TEXT">কেমন আছিস</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="logic_compare" id="cs*$qaCe]Ter/[ScPG=^">
+                        <field name="OP">EQ</field>
+                        <value name="A">
+                          <block type="component_set_get" id="Hu7eu58EGOela+*oS{)#">
+                            <mutation component_type="Label" set_or_get="get" property_name="Text" is_generic="false" instance_name="Label1"></mutation>
+                            <field name="COMPONENT_SELECTOR">Label1</field>
+                            <field name="PROP">Text</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="text" id="+yuJ4zuoBVyEM#0|Mlh0">
+                            <field name="TEXT">দিনকাল কেমন চলছে</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO1">
+              <block type="component_set_get" id="e@-yOb#f+_n%rv?*lvB+">
+                <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Label2"></mutation>
+                <field name="COMPONENT_SELECTOR">Label2</field>
+                <field name="PROP">Text</field>
+                <value name="VALUE">
+                  <block type="text" id="!Ou?hmeG#heG?@~XRR4B">
+                    <field name="TEXT">আমি ভালো আছি , তুমি কেমন আছো ?</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="component_set_get" id="qB?IgX9F*@ec#a}h1(?%">
+                    <mutation component_type="Player" set_or_get="set" property_name="Source" is_generic="false" instance_name="Player1"></mutation>
+                    <field name="COMPONENT_SELECTOR">Player1</field>
+                    <field name="PROP">Source</field>
+                    <value name="VALUE">
+                      <block type="lists_pick_random_item" id="^-U%::/wJwdoy%pPV^]L">
+                        <value name="LIST">
+                          <block type="lists_create_with" id="ke)LN(WwjX[u*K*]sWo[">
+                            <mutation items="3"></mutation>
+                            <value name="ADD0">
+                              <block type="text" id="$lq=UzW-bJ.}X9kBrW|S">
+                                <field name="TEXT">/storage/emulated/0/Ribo/valo_achi.mp3</field>
+                              </block>
+                            </value>
+                            <value name="ADD1">
+                              <block type="text" id="ekBMIDe=vjMf7~YFC=XB">
+                                <field name="TEXT">/storage/emulated/0/Ribo/valo_achi(2).mp3</field>
+                              </block>
+                            </value>
+                            <value name="ADD2">
+                              <block type="text" id="},YqW[(n~?s(q1FoOg5,">
+                                <field name="TEXT">/storage/emulated/0/Ribo/valo_achi(2).mp3</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="component_method" id="jAebmER5^VHd(vLyMRFk">
+                        <mutation component_type="Player" method_name="Start" is_generic="false" instance_name="Player1"></mutation>
+                        <field name="COMPONENT_SELECTOR">Player1</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <value name="IF2">
+              <block type="logic_operation" id="iY78kTV{a}-T-Qf2!J1E">
+                <mutation items="2"></mutation>
+                <field name="OP">OR</field>
+                <value name="A">
+                  <block type="text_contains" id=".,d5|9T{kqo_wFOidwe;">
+                    <value name="TEXT">
+                      <block type="component_set_get" id="3o6}M*UtaDqt6@XHHKdj">
+                        <mutation component_type="Label" set_or_get="get" property_name="Text" is_generic="false" instance_name="Label1"></mutation>
+                        <field name="COMPONENT_SELECTOR">Label1</field>
+                        <field name="PROP">Text</field>
+                      </block>
+                    </value>
+                    <value name="PIECE">
+                      <block type="text" id="),VYU#Pu[GP%Ll[iV0-2">
+                        <field name="TEXT">লাইট অন</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="logic_operation" id="-w5KWQ{KK1G@zPcaGu}1">
+                    <mutation items="2"></mutation>
+                    <field name="OP">OR</field>
+                    <value name="A">
+                      <block type="text_contains" id="hhHSZCPu]x)nUB-m6%6#">
+                        <value name="TEXT">
+                          <block type="component_set_get" id="4Tbo_Q|CSLO?wA.;M`:[">
+                            <mutation component_type="Label" set_or_get="get" property_name="Text" is_generic="false" instance_name="Label1"></mutation>
+                            <field name="COMPONENT_SELECTOR">Label1</field>
+                            <field name="PROP">Text</field>
+                          </block>
+                        </value>
+                        <value name="PIECE">
+                          <block type="text" id="qObl.{ayhnIb$)9y8YfZ">
+                            <field name="TEXT">ফ্ল্যাশলাইট অন</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="text_contains" id="L_KG8dCfo#FA=/)}=0Z#">
+                        <value name="TEXT">
+                          <block type="component_set_get" id="A-ZVOp/p}LFOn;AOYv*n">
+                            <mutation component_type="Label" set_or_get="get" property_name="Text" is_generic="false" instance_name="Label1"></mutation>
+                            <field name="COMPONENT_SELECTOR">Label1</field>
+                            <field name="PROP">Text</field>
+                          </block>
+                        </value>
+                        <value name="PIECE">
+                          <block type="text" id="E4,~S!SbKX],cRgl#Jt,">
+                            <field name="TEXT">টর্চ অন</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO2">
+              <block type="component_set_get" id="CT!Ial#vetIeiB|c%tfZ">
+                <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Label2"></mutation>
+                <field name="COMPONENT_SELECTOR">Label2</field>
+                <field name="PROP">Text</field>
+                <value name="VALUE">
+                  <block type="text" id="[diK($+N.k7+U8d#UM7_">
+                    <field name="TEXT">ফ্লাশ লাইট অন করা হচ্ছে</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="component_method" id="*HVCJZ9bC:,XVY(FcsVg">
+                    <mutation component_type="Camera" method_name="ToggleLight" is_generic="false" instance_name="Camera1"></mutation>
+                    <field name="COMPONENT_SELECTOR">Camera1</field>
+                    <next>
+                      <block type="component_set_get" id="rVh.3B9TQ|qx5lZq/(dL">
+                        <mutation component_type="Player" set_or_get="set" property_name="Source" is_generic="false" instance_name="Player1"></mutation>
+                        <field name="COMPONENT_SELECTOR">Player1</field>
+                        <field name="PROP">Source</field>
+                        <value name="VALUE">
+                          <block type="lists_pick_random_item" id="vYv`Kf[kJI/8q`zB./=%">
+                            <value name="LIST">
+                              <block type="lists_create_with" id="u`kWT8pKkpGXZK5hM@.T">
+                                <mutation items="3"></mutation>
+                                <value name="ADD0">
+                                  <block type="text" id="1u~oJyfbhfH0UfcLB5XV">
+                                    <field name="TEXT">/storage/emulated/0/Ribo/flash_on.mp3</field>
+                                  </block>
+                                </value>
+                                <value name="ADD1">
+                                  <block type="text" id="iL}LQaS1e7)`St5jzP{c">
+                                    <field name="TEXT">/storage/emulated/0/Ribo/flash_on(2).mp3</field>
+                                  </block>
+                                </value>
+                                <value name="ADD2">
+                                  <block type="text" id="aP4jhz%(|WgU|si`;X2*">
+                                    <field name="TEXT">/storage/emulated/0/Ribo/flash_on(2).mp3</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="component_method" id="~0i6ok$)gY|Z5Hmp4ry#">
+                            <mutation component_type="Player" method_name="Start" is_generic="false" instance_name="Player1"></mutation>
+                            <field name="COMPONENT_SELECTOR">Player1</field>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <value name="IF3">
+              <block type="logic_operation" id="a{[ZT@4kyjr+Ha=N]j%|">
+                <mutation items="2"></mutation>
+                <field name="OP">OR</field>
+                <value name="A">
+                  <block type="text_contains" id="nOA,q/rU2b?mKZPLfFgp">
+                    <value name="TEXT">
+                      <block type="component_set_get" id=":Exo)SZQ$j]lv$Z5Yz}H">
+                        <mutation component_type="Label" set_or_get="get" property_name="Text" is_generic="false" instance_name="Label1"></mutation>
+                        <field name="COMPONENT_SELECTOR">Label1</field>
+                        <field name="PROP">Text</field>
+                      </block>
+                    </value>
+                    <value name="PIECE">
+                      <block type="text" id="/1B|q#%;/S,:|w^tx17U">
+                        <field name="TEXT">লাইট অফ</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="logic_operation" id="-KRjyCALz4?qrK2=a7$j">
+                    <mutation items="2"></mutation>
+                    <field name="OP">OR</field>
+                    <value name="A">
+                      <block type="text_contains" id="7XT})6$V!,15{`V{7*Ei">
+                        <value name="TEXT">
+                          <block type="component_set_get" id="pwBBnAOyK/dXmL@eVmRN">
+                            <mutation component_type="Label" set_or_get="get" property_name="Text" is_generic="false" instance_name="Label1"></mutation>
+                            <field name="COMPONENT_SELECTOR">Label1</field>
+                            <field name="PROP">Text</field>
+                          </block>
+                        </value>
+                        <value name="PIECE">
+                          <block type="text" id=",AzN_SZ#tr$sTsmxrB;e">
+                            <field name="TEXT">ফ্ল্যাশলাইট অফ</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="text_contains" id="#n.ysnl46:r5v8NnZUx^">
+                        <value name="TEXT">
+                          <block type="component_set_get" id="GdQHb_=/ai4/D##yx~1r">
+                            <mutation component_type="Label" set_or_get="get" property_name="Text" is_generic="false" instance_name="Label1"></mutation>
+                            <field name="COMPONENT_SELECTOR">Label1</field>
+                            <field name="PROP">Text</field>
+                          </block>
+                        </value>
+                        <value name="PIECE">
+                          <block type="text" id="H!2NsUx17qEx[|@XMEH$">
+                            <field name="TEXT">টর্চ  অফ</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO3">
+              <block type="component_set_get" id="-2Q0P!WWYl:7$x).dE^J">
+                <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Label2"></mutation>
+                <field name="COMPONENT_SELECTOR">Label2</field>
+                <field name="PROP">Text</field>
+                <value name="VALUE">
+                  <block type="text" id="teS3IDK=zzZ((IYsQDj/">
+                    <field name="TEXT">ফ্লাশ লাইট অফ করা হচ্ছে</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="component_method" id="gUB+-Hu+E=t0DtADX_J1">
+                    <mutation component_type="Camera" method_name="ToggleLight" is_generic="false" instance_name="Camera1"></mutation>
+                    <field name="COMPONENT_SELECTOR">Camera1</field>
+                    <next>
+                      <block type="component_set_get" id="aJx/qT#JZvma{hD)m/G7">
+                        <mutation component_type="Player" set_or_get="set" property_name="Source" is_generic="false" instance_name="Player1"></mutation>
+                        <field name="COMPONENT_SELECTOR">Player1</field>
+                        <field name="PROP">Source</field>
+                        <value name="VALUE">
+                          <block type="lists_pick_random_item" id="#BqQ2lH=i$V%$t:f6jf^">
+                            <value name="LIST">
+                              <block type="lists_create_with" id="a8v0z*7[Qy~AoDsc}[Xe">
+                                <mutation items="3"></mutation>
+                                <value name="ADD0">
+                                  <block type="text" id="xXu/Wb0Y|k~5i+],#(6N">
+                                    <field name="TEXT">/storage/emulated/0/Ribo/flash_off.mp3</field>
+                                  </block>
+                                </value>
+                                <value name="ADD1">
+                                  <block type="text" id="{:1UM4Og2v^75i~8}#f1">
+                                    <field name="TEXT">/storage/emulated/0/Ribo/flash_off.mp3</field>
+                                  </block>
+                                </value>
+                                <value name="ADD2">
+                                  <block type="text" id="Dq9@u#,vs4O_u5hCHIx@">
+                                    <field name="TEXT">/storage/emulated/0/Ribo/flash_off.mp3</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="component_method" id="_Q10VnHeOu/?mqew}*T|">
+                            <mutation component_type="Player" method_name="Start" is_generic="false" instance_name="Player1"></mutation>
+                            <field name="COMPONENT_SELECTOR">Player1</field>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <value name="IF4">
+              <block type="logic_operation" id="Klw@B5T).|`TXcav]![L">
+                <mutation items="2"></mutation>
+                <field name="OP">OR</field>
+                <value name="A">
+                  <block type="text_contains" id="hO7Nbm|:zc|`wlZVM}wj">
+                    <value name="TEXT">
+                      <block type="component_set_get" id="PkpqOx!X6SfcQSY2qaP|">
+                        <mutation component_type="Label" set_or_get="get" property_name="Text" is_generic="false" instance_name="Label1"></mutation>
+                        <field name="COMPONENT_SELECTOR">Label1</field>
+                        <field name="PROP">Text</field>
+                      </block>
+                    </value>
+                    <value name="PIECE">
+                      <block type="text" id="]SpOAgmR!up{4F~EZxYV">
+                        <field name="TEXT">তৈরি করেছে</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="logic_operation" id="([$4Q:5YtbmRSLS@]GGo">
+                    <mutation items="2"></mutation>
+                    <field name="OP">OR</field>
+                    <value name="A">
+                      <block type="text_contains" id="TGbNyHpIOmk]v1eZ;W2?">
+                        <value name="TEXT">
+                          <block type="component_set_get" id="t~BIB*,fWMQ4QK$0NI^4">
+                            <mutation component_type="Label" set_or_get="get" property_name="Text" is_generic="false" instance_name="Label1"></mutation>
+                            <field name="COMPONENT_SELECTOR">Label1</field>
+                            <field name="PROP">Text</field>
+                          </block>
+                        </value>
+                        <value name="PIECE">
+                          <block type="text" id="i!9{NleFdaS]EV-Nz0wT">
+                            <field name="TEXT">আবিষ্কার করেছে</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="logic_operation" id="S:X}P%g/5B9/Iocs5=*C">
+                        <mutation items="2"></mutation>
+                        <field name="OP">OR</field>
+                        <value name="A">
+                          <block type="text_contains" id="qtz[4pC^_Xv-l`L};?,W">
+                            <value name="TEXT">
+                              <block type="component_set_get" id="onS?^/}RAhhSc^vseYab">
+                                <mutation component_type="Label" set_or_get="get" property_name="Text" is_generic="false" instance_name="Label1"></mutation>
+                                <field name="COMPONENT_SELECTOR">Label1</field>
+                                <field name="PROP">Text</field>
+                              </block>
+                            </value>
+                            <value name="PIECE">
+                              <block type="text" id="IxXiL^xncvTA5@UG8v1$">
+                                <field name="TEXT">কে বানিয়েছে</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="logic_operation" id="1Qy98O:b$CR6~.,vl)gO">
+                            <mutation items="2"></mutation>
+                            <field name="OP">OR</field>
+                            <value name="A">
+                              <block type="text_contains" id="4mNQqw[wuu?:b2_=C^R.">
+                                <value name="TEXT">
+                                  <block type="component_set_get" id="T)!uqK)L}LwtZ9!N=,8M">
+                                    <mutation component_type="Label" set_or_get="get" property_name="Text" is_generic="false" instance_name="Label1"></mutation>
+                                    <field name="COMPONENT_SELECTOR">Label1</field>
+                                    <field name="PROP">Text</field>
+                                  </block>
+                                </value>
+                                <value name="PIECE">
+                                  <block type="text" id="ke)UdnFr%d+[vcr+n6dG">
+                                    <field name="TEXT">তৈরি করছে</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="logic_operation" id="I/T-eERnXkM=6qDsQwW$">
+                                <mutation items="2"></mutation>
+                                <field name="OP">OR</field>
+                                <value name="A">
+                                  <block type="text_contains" id="f^Zvf?05*`@iSC]|bTBC">
+                                    <value name="TEXT">
+                                      <block type="component_set_get" id="[BI[%3p|s$~-}$}u~4+?">
+                                        <mutation component_type="Label" set_or_get="get" property_name="Text" is_generic="false" instance_name="Label1"></mutation>
+                                        <field name="COMPONENT_SELECTOR">Label1</field>
+                                        <field name="PROP">Text</field>
+                                      </block>
+                                    </value>
+                                    <value name="PIECE">
+                                      <block type="text" id="PPc8#rk/*~R#S$5`y*]`">
+                                        <field name="TEXT">আবিষ্কার করছে</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block type="text_contains" id="]ve=GDrm[8~[/9fms*50">
+                                    <value name="TEXT">
+                                      <block type="component_set_get" id="2@ECR]C7UXj6=fwAkXH`">
+                                        <mutation component_type="Label" set_or_get="get" property_name="Text" is_generic="false" instance_name="Label1"></mutation>
+                                        <field name="COMPONENT_SELECTOR">Label1</field>
+                                        <field name="PROP">Text</field>
+                                      </block>
+                                    </value>
+                                    <value name="PIECE">
+                                      <block type="text" id="H]jcAytDW~PyBG_DAl-z">
+                                        <field name="TEXT">বানাইছে</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO4">
+              <block type="component_set_get" id="xtL0+Am2*}j,iqdqE4i5">
+                <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Label2"></mutation>
+                <field name="COMPONENT_SELECTOR">Label2</field>
+                <field name="PROP">Text</field>
+                <value name="VALUE">
+                  <block type="text" id="!jQ3Yp2$nYTJ%JO5lOKN">
+                    <field name="TEXT">আমাকে Shahriar Shafin 2019 সালের 14 নভেম্বরে তৈরি করেছে</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="component_set_get" id="FPC3UhKG{w^B$e*(OOL8">
+                    <mutation component_type="Player" set_or_get="set" property_name="Source" is_generic="false" instance_name="Player1"></mutation>
+                    <field name="COMPONENT_SELECTOR">Player1</field>
+                    <field name="PROP">Source</field>
+                    <value name="VALUE">
+                      <block type="lists_pick_random_item" id="O9fhqB}S$AYUjgk?!E?L">
+                        <value name="LIST">
+                          <block type="lists_create_with" id="{Y+SK^R{+$yy[]C=jz(B">
+                            <mutation items="3"></mutation>
+                            <value name="ADD0">
+                              <block type="text" id="%Rc%p44Use!RzK8@1X0@">
+                                <field name="TEXT">/storage/emulated/0/Ribo/toili_koreche.mp3</field>
+                              </block>
+                            </value>
+                            <value name="ADD1">
+                              <block type="text" id="VJ6z2O#]%`9)g5*dOOXt">
+                                <field name="TEXT">/storage/emulated/0/Ribo/toili_koreche.mp3</field>
+                              </block>
+                            </value>
+                            <value name="ADD2">
+                              <block type="text" id="g{u7Pc0d+HoaFe]YjP[6">
+                                <field name="TEXT">/storage/emulated/0/Ribo/toili_koreche.mp3</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="component_method" id="s4.KB.nS#rPv.amhyGh}">
+                        <mutation component_type="Player" method_name="Start" is_generic="false" instance_name="Player1"></mutation>
+                        <field name="COMPONENT_SELECTOR">Player1</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <value name="IF5">
+              <block type="logic_operation" id="Y?^W/d$XJ4wG6F.t+w]P">
+                <mutation items="2"></mutation>
+                <field name="OP">OR</field>
+                <value name="A">
+                  <block type="logic_compare" id="eOJZ`Rs1[qMgItTQs8Jr">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block type="component_set_get" id="Df{b=*[Nzdd+vwX,-5];">
+                        <mutation component_type="Label" set_or_get="get" property_name="Text" is_generic="false" instance_name="Label1"></mutation>
+                        <field name="COMPONENT_SELECTOR">Label1</field>
+                        <field name="PROP">Text</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="text" id="G!Qfa5(=:}%293h*SG@-">
+                        <field name="TEXT">তুমি কে</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="logic_operation" id="~_ZxFa3-No7UPfZbT-IH">
+                    <mutation items="2"></mutation>
+                    <field name="OP">OR</field>
+                    <value name="A">
+                      <block type="logic_compare" id="?F|LL_R{{vK%I@Ob$?c/">
+                        <field name="OP">EQ</field>
+                        <value name="A">
+                          <block type="component_set_get" id="$KDw1?#WIh1V0QlrZ33J">
+                            <mutation component_type="Label" set_or_get="get" property_name="Text" is_generic="false" instance_name="Label1"></mutation>
+                            <field name="COMPONENT_SELECTOR">Label1</field>
+                            <field name="PROP">Text</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="text" id="gvZKTM,369^$M8;GWmqP">
+                            <field name="TEXT">কে তুমি</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="logic_operation" id="X$HtZ:vzAc%@;Tr2$32I">
+                        <mutation items="2"></mutation>
+                        <field name="OP">OR</field>
+                        <value name="A">
+                          <block type="text_contains" id="cEKAao2xd1U$XEYj,~|s">
+                            <value name="TEXT">
+                              <block type="component_set_get" id="-ugy+LZFj|hk/K:Iu$[e">
+                                <mutation component_type="Label" set_or_get="get" property_name="Text" is_generic="false" instance_name="Label1"></mutation>
+                                <field name="COMPONENT_SELECTOR">Label1</field>
+                                <field name="PROP">Text</field>
+                              </block>
+                            </value>
+                            <value name="PIECE">
+                              <block type="text" id="iap[v?tXE6UW;o={GXKN">
+                                <field name="TEXT">তোমার পরিচয়</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="logic_compare" id="IytvncuRB.GzYHZ$t-V9">
+                            <field name="OP">EQ</field>
+                            <value name="A">
+                              <block type="component_set_get" id="nv8hb?|pdcVj^U@akR3k">
+                                <mutation component_type="Label" set_or_get="get" property_name="Text" is_generic="false" instance_name="Label1"></mutation>
+                                <field name="COMPONENT_SELECTOR">Label1</field>
+                                <field name="PROP">Text</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="text" id="Ytwf]^t]ItbFiK0Tmf=;">
+                                <field name="TEXT">তুই কে</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO5">
+              <block type="component_set_get" id="VzyTSJ`+i*)F^4MjS9``">
+                <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Label2"></mutation>
+                <field name="COMPONENT_SELECTOR">Label2</field>
+                <field name="PROP">Text</field>
+                <value name="VALUE">
+                  <block type="text" id="FZ82*PO:--`.,~0sbuL9">
+                    <field name="TEXT">আমার নাম রিবো । আমি কৃত্রিম বুদ্ধিমত্তা সম্পন্ন আপনার একজন ব্যক্তিগত সহায়ক</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="component_set_get" id="t`mbDQn9~jX$D{sPG]aJ">
+                    <mutation component_type="Player" set_or_get="set" property_name="Source" is_generic="false" instance_name="Player1"></mutation>
+                    <field name="COMPONENT_SELECTOR">Player1</field>
+                    <field name="PROP">Source</field>
+                    <value name="VALUE">
+                      <block type="lists_pick_random_item" id="*f;OwZ^EeU?SafN6,wb%">
+                        <value name="LIST">
+                          <block type="lists_create_with" id="aA=Oxdy2I~Kt}CoGglNa">
+                            <mutation items="3"></mutation>
+                            <value name="ADD0">
+                              <block type="text" id="|m[WNlqA)+YTYzf`#dnQ">
+                                <field name="TEXT">/storage/emulated/0/Ribo/k_tumi.mp3</field>
+                              </block>
+                            </value>
+                            <value name="ADD1">
+                              <block type="text" id="z/fpS;Z+0c=ia$T/b:GX">
+                                <field name="TEXT">/storage/emulated/0/Ribo/k_tumi.mp3</field>
+                              </block>
+                            </value>
+                            <value name="ADD2">
+                              <block type="text" id="3RE{FVXpLt1}n:S~d*+X">
+                                <field name="TEXT">/storage/emulated/0/Ribo/k_tumi.mp3</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="component_method" id="@7qqI7D;#~*Bp2_jN?kd">
+                        <mutation component_type="Player" method_name="Start" is_generic="false" instance_name="Player1"></mutation>
+                        <field name="COMPONENT_SELECTOR">Player1</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <value name="IF6">
+              <block type="logic_operation" id=";}C!WMw;Q4HU5)^UUTL=">
+                <mutation items="2"></mutation>
+                <field name="OP">OR</field>
+                <value name="A">
+                  <block type="text_contains" id="ua}_WB^10lg88q1}c]9A">
+                    <value name="TEXT">
+                      <block type="component_set_get" id="kuQPWHArZg0%Bs(R~0Wi">
+                        <mutation component_type="Label" set_or_get="get" property_name="Text" is_generic="false" instance_name="Label1"></mutation>
+                        <field name="COMPONENT_SELECTOR">Label1</field>
+                        <field name="PROP">Text</field>
+                      </block>
+                    </value>
+                    <value name="PIECE">
+                      <block type="text" id="*rdWTQ7FyH-qjjeNod@{">
+                        <field name="TEXT">কি করো</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="logic_operation" id="r%JV}bkTK$7`en-2%P@(">
+                    <mutation items="2"></mutation>
+                    <field name="OP">OR</field>
+                    <value name="A">
+                      <block type="text_contains" id="_J].t??^.V@4g}rYB5ND">
+                        <value name="TEXT">
+                          <block type="component_set_get" id="!m7Y1iYd0qHx.*|r/sJ6">
+                            <mutation component_type="Label" set_or_get="get" property_name="Text" is_generic="false" instance_name="Label1"></mutation>
+                            <field name="COMPONENT_SELECTOR">Label1</field>
+                            <field name="PROP">Text</field>
+                          </block>
+                        </value>
+                        <value name="PIECE">
+                          <block type="text" id="Ga6u!wv6+dZTnca=9kI}">
+                            <field name="TEXT">কি করছ</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="logic_operation" id="b|q;?I:wv1{oR|9B$;J#">
+                        <mutation items="2"></mutation>
+                        <field name="OP">OR</field>
+                        <value name="A">
+                          <block type="text_contains" id="E:TIk^-JN*zqD=to58z!">
+                            <value name="TEXT">
+                              <block type="component_set_get" id=",kYDl{|V8$ZuPx,KEsa=">
+                                <mutation component_type="Label" set_or_get="get" property_name="Text" is_generic="false" instance_name="Label1"></mutation>
+                                <field name="COMPONENT_SELECTOR">Label1</field>
+                                <field name="PROP">Text</field>
+                              </block>
+                            </value>
+                            <value name="PIECE">
+                              <block type="text" id="e@mwNz*uuKJ#F=K*dM0]">
+                                <field name="TEXT">কি করতেছিস</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="text_contains" id="{7FG:LhSBALr/tdyGHuG">
+                            <value name="TEXT">
+                              <block type="component_set_get" id="Tz!@jlw8wFoQbAPK),@x">
+                                <mutation component_type="Label" set_or_get="get" property_name="Text" is_generic="false" instance_name="Label1"></mutation>
+                                <field name="COMPONENT_SELECTOR">Label1</field>
+                                <field name="PROP">Text</field>
+                              </block>
+                            </value>
+                            <value name="PIECE">
+                              <block type="text" id=",[c_35J5(Y31n4J!O|:s">
+                                <field name="TEXT">কি করতেছ</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO6">
+              <block type="component_set_get" id="U`fKM}C6vlH@x4MI@hCJ">
+                <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Label2"></mutation>
+                <field name="COMPONENT_SELECTOR">Label2</field>
+                <field name="PROP">Text</field>
+                <value name="VALUE">
+                  <block type="text" id="T2h%z!ymP/62!!T;x/kK">
+                    <field name="TEXT">আমি প্রতিনিয়ত নতুন নতুন বিষয় সম্পর্কে জানার চেষ্টা করি , এখনো সেটাই করছি</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="component_set_get" id="a9`+_3C5_t@{;+[:u$mm">
+                    <mutation component_type="Player" set_or_get="set" property_name="Source" is_generic="false" instance_name="Player1"></mutation>
+                    <field name="COMPONENT_SELECTOR">Player1</field>
+                    <field name="PROP">Source</field>
+                    <value name="VALUE">
+                      <block type="lists_pick_random_item" id="E%]FR+I|sef,sj`=3qLJ">
+                        <value name="LIST">
+                          <block type="lists_create_with" id=";nS~gM,,/H{,Oq$lP,u.">
+                            <mutation items="3"></mutation>
+                            <value name="ADD0">
+                              <block type="text" id="n95#G?r]I~Eb;yFaR,g]">
+                                <field name="TEXT">/storage/emulated/0/Ribo/ki_korcho.mp3</field>
+                              </block>
+                            </value>
+                            <value name="ADD1">
+                              <block type="text" id="Ux]JNvzH{{twd46A/N*3">
+                                <field name="TEXT">/storage/emulated/0/Ribo/ki_korcho.mp3</field>
+                              </block>
+                            </value>
+                            <value name="ADD2">
+                              <block type="text" id="T`wkHnBdx.C6E3EVwhr_">
+                                <field name="TEXT">/storage/emulated/0/Ribo/ki_korcho.mp3</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="component_method" id="hpT+gawLZ)0+2xPYtrhV">
+                        <mutation component_type="Player" method_name="Start" is_generic="false" instance_name="Player1"></mutation>
+                        <field name="COMPONENT_SELECTOR">Player1</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <value name="IF7">
+              <block type="logic_operation" id="t?)Xk@t=tzIwJS./:QBB">
+                <mutation items="2"></mutation>
+                <field name="OP">OR</field>
+                <value name="A">
+                  <block type="text_contains" id="e(Z{}{_G8mA`)*ImEgsZ">
+                    <value name="TEXT">
+                      <block type="component_set_get" id="ZEfgT2Zgr=v;SBBKu^oW">
+                        <mutation component_type="Label" set_or_get="get" property_name="Text" is_generic="false" instance_name="Label1"></mutation>
+                        <field name="COMPONENT_SELECTOR">Label1</field>
+                        <field name="PROP">Text</field>
+                      </block>
+                    </value>
+                    <value name="PIECE">
+                      <block type="text" id="JdB@_B73*N~,X|$k]^S9">
+                        <field name="TEXT">আম্মুকে ফোন</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="text_contains" id="1Gwf`8]5o9e_t?6dImR4">
+                    <value name="TEXT">
+                      <block type="component_set_get" id="BXkM72dZffNd#}AvN/[S">
+                        <mutation component_type="Label" set_or_get="get" property_name="Text" is_generic="false" instance_name="Label1"></mutation>
+                        <field name="COMPONENT_SELECTOR">Label1</field>
+                        <field name="PROP">Text</field>
+                      </block>
+                    </value>
+                    <value name="PIECE">
+                      <block type="text" id="^#kq)J{[Ldm9FZ@I3P2z">
+                        <field name="TEXT">আম্মুকে কল</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO7">
+              <block type="component_set_get" id="a;T6~ry*5eY5XVshHR;n">
+                <mutation component_type="Clock" set_or_get="set" property_name="TimerEnabled" is_generic="false" instance_name="Clock1"></mutation>
+                <field name="COMPONENT_SELECTOR">Clock1</field>
+                <field name="PROP">TimerEnabled</field>
+                <value name="VALUE">
+                  <block type="logic_boolean" id="1peSh4QT|u%*#w5]4l3{">
+                    <field name="BOOL">TRUE</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="component_set_get" id="P[6bx,!0O}*W.L.R7ylO">
+                    <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Label2"></mutation>
+                    <field name="COMPONENT_SELECTOR">Label2</field>
+                    <field name="PROP">Text</field>
+                    <value name="VALUE">
+                      <block type="text" id="oxTAehMDS6ZoF/H:Nlr[">
+                        <field name="TEXT">আপনার আম্মুকে কল করা হচ্ছে</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="component_set_get" id="B*A%O=oqKBBsZSLK*^k=">
+                        <mutation component_type="Player" set_or_get="set" property_name="Source" is_generic="false" instance_name="Player1"></mutation>
+                        <field name="COMPONENT_SELECTOR">Player1</field>
+                        <field name="PROP">Source</field>
+                        <value name="VALUE">
+                          <block type="lists_pick_random_item" id="X-qHeK[5]Ah}m8z:w48,">
+                            <value name="LIST">
+                              <block type="lists_create_with" id="Z7)%yW#%2%8n6S%uyI~)">
+                                <mutation items="3"></mutation>
+                                <value name="ADD0">
+                                  <block type="text" id="kM`wTA|F=tKE8]_HQxHA">
+                                    <field name="TEXT">/storage/emulated/0/Ribo/call_ammu.mp3</field>
+                                  </block>
+                                </value>
+                                <value name="ADD1">
+                                  <block type="text" id="[qltW|%nevJDjIHCweHQ">
+                                    <field name="TEXT">/storage/emulated/0/Ribo/call_ammu.mp3</field>
+                                  </block>
+                                </value>
+                                <value name="ADD2">
+                                  <block type="text" id="cuT63qu=[;v$p{Nvb~1I">
+                                    <field name="TEXT">/storage/emulated/0/Ribo/call_ammu.mp3</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="component_method" id="W`s5)YOmuN(!JvHe]R5)">
+                            <mutation component_type="Player" method_name="Start" is_generic="false" instance_name="Player1"></mutation>
+                            <field name="COMPONENT_SELECTOR">Player1</field>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <value name="IF8">
+              <block type="logic_operation" id="V~Gm}2!=;],,:n|38#dY">
+                <mutation items="2"></mutation>
+                <field name="OP">OR</field>
+                <value name="A">
+                  <block type="text_contains" id="eeO.jwRA@V]#?4-VS2$$">
+                    <value name="TEXT">
+                      <block type="component_set_get" id="C5DxM[e|%-[vtt9tMY}f">
+                        <mutation component_type="Label" set_or_get="get" property_name="Text" is_generic="false" instance_name="Label1"></mutation>
+                        <field name="COMPONENT_SELECTOR">Label1</field>
+                        <field name="PROP">Text</field>
+                      </block>
+                    </value>
+                    <value name="PIECE">
+                      <block type="text" id="ymm|TE1jjT5:2%1ECj4m">
+                        <field name="TEXT">ক্যামেরা</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="text_contains" id="Z,_3dr5O^H|2Rlk%/=h2">
+                    <value name="TEXT">
+                      <block type="component_set_get" id="1{A(SrV2)RT7~E!gbo(|">
+                        <mutation component_type="Label" set_or_get="get" property_name="Text" is_generic="false" instance_name="Label1"></mutation>
+                        <field name="COMPONENT_SELECTOR">Label1</field>
+                        <field name="PROP">Text</field>
+                      </block>
+                    </value>
+                    <value name="PIECE">
+                      <block type="text" id="0}w}u0L8:UGf-kGVKI]O">
+                        <field name="TEXT">ছবি</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO8">
+              <block type="component_method" id="g?_[fj1)|w+olu=n|Yf5">
+                <mutation component_type="Camera" method_name="TakePicture" is_generic="false" instance_name="Camera1"></mutation>
+                <field name="COMPONENT_SELECTOR">Camera1</field>
+              </block>
+            </statement>
+            <value name="IF9">
+              <block type="logic_operation" id="Gcj~#6Co0g#Mzbx!q+dm">
+                <mutation items="2"></mutation>
+                <field name="OP">OR</field>
+                <value name="A">
+                  <block type="text_contains" id="j{(4$.H$H]wGA._@m:}^">
+                    <value name="TEXT">
+                      <block type="component_set_get" id="rk6}tR*6AU]{Nz}]7Jj]">
+                        <mutation component_type="Label" set_or_get="get" property_name="Text" is_generic="false" instance_name="Label1"></mutation>
+                        <field name="COMPONENT_SELECTOR">Label1</field>
+                        <field name="PROP">Text</field>
+                      </block>
+                    </value>
+                    <value name="PIECE">
+                      <block type="text" id="1h}+fITbfxgEyTj$AL4l">
+                        <field name="TEXT">ক্রোম</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="text_contains" id="C[w{#[aEf^^kTbP475xe">
+                    <value name="TEXT">
+                      <block type="component_set_get" id="UsotPa};-,[)NnR9Cz|I">
+                        <mutation component_type="Label" set_or_get="get" property_name="Text" is_generic="false" instance_name="Label1"></mutation>
+                        <field name="COMPONENT_SELECTOR">Label1</field>
+                        <field name="PROP">Text</field>
+                      </block>
+                    </value>
+                    <value name="PIECE">
+                      <block type="text" id="us*2|-.}Gt81-e:3DcWf">
+                        <field name="TEXT">ব্রাউজার</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO9">
+              <block type="component_set_get" id="B(~.P)U*F64laMC9c;xB">
+                <mutation component_type="ActivityStarter" set_or_get="set" property_name="Action" is_generic="false" instance_name="Activity_Starter1"></mutation>
+                <field name="COMPONENT_SELECTOR">Activity_Starter1</field>
+                <field name="PROP">Action</field>
+                <value name="VALUE">
+                  <block type="text" id="oio(:bz!C=L+JXXtpqdV">
+                    <field name="TEXT">android.intent.action.VIEW</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="component_set_get" id="w7;SM5._L~bRZc?Fq63Q">
+                    <mutation component_type="ActivityStarter" set_or_get="set" property_name="ActivityPackage" is_generic="false" instance_name="Activity_Starter1"></mutation>
+                    <field name="COMPONENT_SELECTOR">Activity_Starter1</field>
+                    <field name="PROP">ActivityPackage</field>
+                    <value name="VALUE">
+                      <block type="text" id="r):Ix$v-,guQUKgg|j:=">
+                        <field name="TEXT">com.android.chrome</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="component_set_get" id="]F/]rTnoRe{ii:sYprG.">
+                        <mutation component_type="ActivityStarter" set_or_get="set" property_name="ActivityClass" is_generic="false" instance_name="Activity_Starter1"></mutation>
+                        <field name="COMPONENT_SELECTOR">Activity_Starter1</field>
+                        <field name="PROP">ActivityClass</field>
+                        <value name="VALUE">
+                          <block type="text" id="=EXWF9qp-gY}tch_A(sj">
+                            <field name="TEXT">com.google.android.apps.chrome.Main</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="component_set_get" id="s@H0):FUOfH/4]9pv=oH">
+                            <mutation component_type="ActivityStarter" set_or_get="set" property_name="DataUri" is_generic="false" instance_name="Activity_Starter1"></mutation>
+                            <field name="COMPONENT_SELECTOR">Activity_Starter1</field>
+                            <field name="PROP">DataUri</field>
+                            <value name="VALUE">
+                              <block type="text" id="KM.-y(PQD1^(oo7CdZYB">
+                                <field name="TEXT">www.google.com</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="component_method" id="GZ-NsCOf*SM|p3u:[c^@">
+                                <mutation component_type="ActivityStarter" method_name="StartActivity" is_generic="false" instance_name="Activity_Starter1"></mutation>
+                                <field name="COMPONENT_SELECTOR">Activity_Starter1</field>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <value name="IF10">
+              <block type="logic_operation" id="Hg@Zf:j?@vzKKchgWgV7">
+                <mutation items="2"></mutation>
+                <field name="OP">OR</field>
+                <value name="A">
+                  <block type="text_contains" id="70w^Dj?8w7QeR72z0i@T">
+                    <value name="TEXT">
+                      <block type="component_set_get" id="b=Uzk5MH.UnzY~s,0HOp">
+                        <mutation component_type="Label" set_or_get="get" property_name="Text" is_generic="false" instance_name="Label1"></mutation>
+                        <field name="COMPONENT_SELECTOR">Label1</field>
+                        <field name="PROP">Text</field>
+                      </block>
+                    </value>
+                    <value name="PIECE">
+                      <block type="text" id="B?%,4dw$]eYw_~:(!7iU">
+                        <field name="TEXT">ফেইসবুক</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="text_contains" id="3.,bf[@lWe?{MgZ{K/Dd">
+                    <value name="TEXT">
+                      <block type="component_set_get" id="W.Z:Bino4bI|o^F.TU40">
+                        <mutation component_type="Label" set_or_get="get" property_name="Text" is_generic="false" instance_name="Label1"></mutation>
+                        <field name="COMPONENT_SELECTOR">Label1</field>
+                        <field name="PROP">Text</field>
+                      </block>
+                    </value>
+                    <value name="PIECE">
+                      <block type="text" id="CQF~*{g+2/N;IsgOUb8[">
+                        <field name="TEXT">ফেসবুক</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO10">
+              <block type="component_set_get" id="pFHm6Jb_YSmeT/6}5Fd~">
+                <mutation component_type="ActivityStarter" set_or_get="set" property_name="Action" is_generic="false" instance_name="Activity_Starter1"></mutation>
+                <field name="COMPONENT_SELECTOR">Activity_Starter1</field>
+                <field name="PROP">Action</field>
+                <value name="VALUE">
+                  <block type="text" id="kxhSPY3NEZ_1`(=Z#ZO.">
+                    <field name="TEXT">android.intent.action.VIEW</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="component_set_get" id=".=k5w[.W4BS%74#Q6mD#">
+                    <mutation component_type="ActivityStarter" set_or_get="set" property_name="DataUri" is_generic="false" instance_name="Activity_Starter1"></mutation>
+                    <field name="COMPONENT_SELECTOR">Activity_Starter1</field>
+                    <field name="PROP">DataUri</field>
+                    <value name="VALUE">
+                      <block type="text" id="nH!z-r3%deT4gD+[}|=u">
+                        <field name="TEXT">fb://facebookwebmodal/f?href=https://www.facebook.com/example/</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="component_method" id="J9KE06E.xZQM`*5qbmev">
+                        <mutation component_type="ActivityStarter" method_name="StartActivity" is_generic="false" instance_name="Activity_Starter1"></mutation>
+                        <field name="COMPONENT_SELECTOR">Activity_Starter1</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <value name="IF11">
+              <block type="logic_operation" id="@3j])ObhEFA~DhHv@_~$">
+                <mutation items="2"></mutation>
+                <field name="OP">OR</field>
+                <value name="A">
+                  <block type="text_contains" id="UP@L/qw,.Be}^Cg(JwkJ">
+                    <value name="TEXT">
+                      <block type="component_set_get" id="^FT%6*Uyr^-}PKv2(`2l">
+                        <mutation component_type="Label" set_or_get="get" property_name="Text" is_generic="false" instance_name="Label1"></mutation>
+                        <field name="COMPONENT_SELECTOR">Label1</field>
+                        <field name="PROP">Text</field>
+                      </block>
+                    </value>
+                    <value name="PIECE">
+                      <block type="text" id="~DFO9l!N}%C-[R?We!(r">
+                        <field name="TEXT">ইনস্টাগ্রাম</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="text_contains" id="-~@1:bu]umd^0x=BT~7?">
+                    <value name="TEXT">
+                      <block type="component_set_get" id="J/y773C2kZCPd9Nn.pbZ">
+                        <mutation component_type="Label" set_or_get="get" property_name="Text" is_generic="false" instance_name="Label1"></mutation>
+                        <field name="COMPONENT_SELECTOR">Label1</field>
+                        <field name="PROP">Text</field>
+                      </block>
+                    </value>
+                    <value name="PIECE">
+                      <block type="text" id="L2tg*Xvk=eZ%7(73~xHQ">
+                        <field name="TEXT">ইন্সট্রাগ্রাম</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO11">
+              <block type="component_set_get" id="sT=Lk-a[wJdf^P)@J^8|">
+                <mutation component_type="ActivityStarter" set_or_get="set" property_name="Action" is_generic="false" instance_name="Activity_Starter1"></mutation>
+                <field name="COMPONENT_SELECTOR">Activity_Starter1</field>
+                <field name="PROP">Action</field>
+                <value name="VALUE">
+                  <block type="text" id="v6E:K-5e6~Q=8Zu_6@z+">
+                    <field name="TEXT">android.intent.action.VIEW</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="component_set_get" id="VVNO#gqV,v:Vu[`!lS9c">
+                    <mutation component_type="ActivityStarter" set_or_get="set" property_name="DataUri" is_generic="false" instance_name="Activity_Starter1"></mutation>
+                    <field name="COMPONENT_SELECTOR">Activity_Starter1</field>
+                    <field name="PROP">DataUri</field>
+                    <value name="VALUE">
+                      <block type="text" id="aT8~fZ4t1wWve*D]HjCx">
+                        <field name="TEXT">https://www.instagram.com/_u/example/</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="component_method" id="8ZhL$3N#:/1v+#:#rAu#">
+                        <mutation component_type="ActivityStarter" method_name="StartActivity" is_generic="false" instance_name="Activity_Starter1"></mutation>
+                        <field name="COMPONENT_SELECTOR">Activity_Starter1</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <value name="IF12">
+              <block type="logic_operation" id="kr6@}T6=X:5A(d3)/uNM">
+                <mutation items="2"></mutation>
+                <field name="OP">OR</field>
+                <value name="A">
+                  <block type="text_contains" id="d+$qLmZc{V:8{N4x,bbF">
+                    <value name="TEXT">
+                      <block type="component_set_get" id="u@}98ZOMqhMgVm2l8)y|">
+                        <mutation component_type="Label" set_or_get="get" property_name="Text" is_generic="false" instance_name="Label1"></mutation>
+                        <field name="COMPONENT_SELECTOR">Label1</field>
+                        <field name="PROP">Text</field>
+                      </block>
+                    </value>
+                    <value name="PIECE">
+                      <block type="text" id="7EkhlSja$yh%v%5{(9,4">
+                        <field name="TEXT">কোথায়</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="text_contains" id="*%KQW9Xtb~r;!U.-(;Ma">
+                    <value name="TEXT">
+                      <block type="component_set_get" id="GBKYf1p1DFhk-5iI`Tao">
+                        <mutation component_type="Label" set_or_get="get" property_name="Text" is_generic="false" instance_name="Label1"></mutation>
+                        <field name="COMPONENT_SELECTOR">Label1</field>
+                        <field name="PROP">Text</field>
+                      </block>
+                    </value>
+                    <value name="PIECE">
+                      <block type="text" id="G(TAx-k^W^sV6e7~I8`z">
+                        <field name="TEXT">লোকেশন</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO12">
+              <block type="component_set_get" id=".%q?4H[h__*Ap7naAt1R">
+                <mutation component_type="GoogleMap" set_or_get="set" property_name="Visible" is_generic="false" instance_name="Google_Maps1"></mutation>
+                <field name="COMPONENT_SELECTOR">Google_Maps1</field>
+                <field name="PROP">Visible</field>
+                <value name="VALUE">
+                  <block type="logic_boolean" id="P)cC2sl4]_#*,#qbFI}0">
+                    <field name="BOOL">TRUE</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="component_method" id="p+YYz2hLj{fx22UhvDuo">
+                    <mutation component_type="GoogleMap" method_name="EnableMyLocation" is_generic="false" instance_name="Google_Maps1"></mutation>
+                    <field name="COMPONENT_SELECTOR">Google_Maps1</field>
+                    <value name="ARG0">
+                      <block type="logic_boolean" id="`;y=]V0rY7j0O!Hwq-)+">
+                        <field name="BOOL">TRUE</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="component_set_get" id="]M)`MD|r*H4n!]|?7khy">
+                        <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Label2"></mutation>
+                        <field name="COMPONENT_SELECTOR">Label2</field>
+                        <field name="PROP">Text</field>
+                        <value name="VALUE">
+                          <block type="component_method" id="C3/jWJqVGc%sEWP5c^Sb">
+                            <mutation component_type="GoogleMap" method_name="GetMyLocation" is_generic="false" instance_name="Google_Maps1"></mutation>
+                            <field name="COMPONENT_SELECTOR">Google_Maps1</field>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <statement name="ELSE">
+              <block type="component_set_get" id="Jr=7ZIg5k%2eo(anI^M%">
+                <mutation component_type="Image" set_or_get="set" property_name="Visible" is_generic="false" instance_name="Image2"></mutation>
+                <field name="COMPONENT_SELECTOR">Image2</field>
+                <field name="PROP">Visible</field>
+                <value name="VALUE">
+                  <block type="logic_boolean" id="_hA1@bs-^Xc^=m3mI[J8">
+                    <field name="BOOL">TRUE</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="component_set_get" id="/|wA-(c1IaF2$gK.?mV4">
+                    <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Label2"></mutation>
+                    <field name="COMPONENT_SELECTOR">Label2</field>
+                    <field name="PROP">Text</field>
+                    <value name="VALUE">
+                      <block type="text" id="Pn^2$3V,d@r9fBlpC;8(">
+                        <field name="TEXT">দুঃখিত,বুঝতে পারিনি অন্য কিছু জিজ্ঞাসা করুন</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="component_set_get" id="Hg[GrF%JycF-tQz?cRhC">
+                        <mutation component_type="Player" set_or_get="set" property_name="Source" is_generic="false" instance_name="Player1"></mutation>
+                        <field name="COMPONENT_SELECTOR">Player1</field>
+                        <field name="PROP">Source</field>
+                        <value name="VALUE">
+                          <block type="lists_pick_random_item" id="E*v:x;SdRM:/m(o5.mc7">
+                            <value name="LIST">
+                              <block type="lists_create_with" id="0a{IxtAT2_|QR0fdNU{f">
+                                <mutation items="3"></mutation>
+                                <value name="ADD0">
+                                  <block type="text" id="V5Pc)I-nzUZvuc:mjh(e">
+                                    <field name="TEXT">/storage/emulated/0/Ribo/bujte_parini.mp3</field>
+                                  </block>
+                                </value>
+                                <value name="ADD1">
+                                  <block type="text" id="!KKVqa6%(;S_2~h6mLCQ">
+                                    <field name="TEXT">/storage/emulated/0/Ribo/bujte_parini.mp3</field>
+                                  </block>
+                                </value>
+                                <value name="ADD2">
+                                  <block type="text" id="f_1b7M7ur1~gWX,aumWr">
+                                    <field name="TEXT">/storage/emulated/0/Ribo/bujte_parini.mp3</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="component_method" id="Dqjy]KUD.;a7_M{|=adF">
+                            <mutation component_type="Player" method_name="Start" is_generic="false" instance_name="Player1"></mutation>
+                            <field name="COMPONENT_SELECTOR">Player1</field>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_set_get" id="[V]XU3Uy*=$P7rr0NJB_" x="-830" y="-3870">
+    <mutation component_type="ScSpeechRecognizer" set_or_get="set" property_name="ContinuoslyRecognitionEnabled" is_generic="false" instance_name="ScSpeechRecognizer1"></mutation>
+    <field name="COMPONENT_SELECTOR">ScSpeechRecognizer1</field>
+    <field name="PROP">ContinuoslyRecognitionEnabled</field>
+    <value name="VALUE">
+      <block type="logic_boolean" id="oO|yb@kB40(^;[5gdo)2">
+        <field name="BOOL">TRUE</field>
+      </block>
+    </value>
+    <next>
+      <block type="component_method" id="9;a(KYMb?I~C8?:FVfH_">
+        <mutation component_type="ScSpeechRecognizer" method_name="GetText" is_generic="false" instance_name="ScSpeechRecognizer1"></mutation>
+        <field name="COMPONENT_SELECTOR">ScSpeechRecognizer1</field>
+        <next>
+          <block type="component_set_get" id="1=}YUn*S=gF*QdrtWLr.">
+            <mutation component_type="ScSpeechRecognizer" set_or_get="set" property_name="MuteAudio" is_generic="false" instance_name="ScSpeechRecognizer1"></mutation>
+            <field name="COMPONENT_SELECTOR">ScSpeechRecognizer1</field>
+            <field name="PROP">MuteAudio</field>
+            <value name="VALUE">
+              <block type="logic_boolean" id="N1Li[~DRokLQJTv/b6ef">
+                <field name="BOOL">TRUE</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="component_event" id="d6$DAYu1!k:u{4hj+U,B" x="-836" y="-3778">
+    <mutation component_type="ScSpeechRecognizer" is_generic="false" instance_name="ScSpeechRecognizer1" event_name="AfterGettingText"></mutation>
+    <field name="COMPONENT_SELECTOR">ScSpeechRecognizer1</field>
+    <statement name="DO">
+      <block type="component_set_get" id="X8B?6:{)00#Y-=g)*zs9">
+        <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Label1"></mutation>
+        <field name="COMPONENT_SELECTOR">Label1</field>
+        <field name="PROP">Text</field>
+        <value name="VALUE">
+          <block type="component_set_get" id=";B*x](Enl9P*_Fq9-P3V">
+            <mutation component_type="ScSpeechRecognizer" set_or_get="get" property_name="Result" is_generic="false" instance_name="ScSpeechRecognizer1"></mutation>
+            <field name="COMPONENT_SELECTOR">ScSpeechRecognizer1</field>
+            <field name="PROP">Result</field>
+          </block>
+        </value>
+        <next>
+          <block type="component_set_get" id="EnGC@Sc]bWI4VE+3^Dyu">
+            <mutation component_type="ScSpeechRecognizer" set_or_get="set" property_name="MuteAudio" is_generic="false" instance_name="ScSpeechRecognizer1"></mutation>
+            <field name="COMPONENT_SELECTOR">ScSpeechRecognizer1</field>
+            <field name="PROP">MuteAudio</field>
+            <value name="VALUE">
+              <block type="logic_boolean" id="s8;5r.OP!}EIoQ@-eqIL">
+                <field name="BOOL">TRUE</field>
+              </block>
+            </value>
+            <next>
+              <block type="controls_if" id="qNDRlJm/^KsEK78ac8|X">
+                <mutation else="1"></mutation>
+                <value name="IF0">
+                  <block type="logic_operation" id="Fi+*dyFQj.fo?nvYgoKX">
+                    <mutation items="2"></mutation>
+                    <field name="OP">OR</field>
+                    <value name="A">
+                      <block type="text_contains" id="h$J8Q!qfVn507U2HOj)b">
+                        <value name="TEXT">
+                          <block type="component_set_get" id="Gc$!K!$?vlBm@y7|(T:(">
+                            <mutation component_type="Label" set_or_get="get" property_name="Text" is_generic="false" instance_name="Label1"></mutation>
+                            <field name="COMPONENT_SELECTOR">Label1</field>
+                            <field name="PROP">Text</field>
+                          </block>
+                        </value>
+                        <value name="PIECE">
+                          <block type="text" id="V(kggqRGtQL5K6`=p?nm">
+                            <field name="TEXT">hi</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="logic_operation" id="Fw^AhOG(rSyH,8M|{/4r">
+                        <mutation items="2"></mutation>
+                        <field name="OP">OR</field>
+                        <value name="A">
+                          <block type="text_contains" id="M}F$)},=C6YsVyJ467Z8">
+                            <value name="TEXT">
+                              <block type="component_set_get" id="U`s4BUi%;KB*dI}}N)*)">
+                                <mutation component_type="Label" set_or_get="get" property_name="Text" is_generic="false" instance_name="Label1"></mutation>
+                                <field name="COMPONENT_SELECTOR">Label1</field>
+                                <field name="PROP">Text</field>
+                              </block>
+                            </value>
+                            <value name="PIECE">
+                              <block type="text" id="8N`psW(`yx-wMTB7U0wm">
+                                <field name="TEXT">Repo</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="text_contains" id="$x?iVGGRSY)XLeyg[o1u">
+                            <value name="TEXT">
+                              <block type="component_set_get" id="WY*R{aJxuoK_^_sJ[UCq">
+                                <mutation component_type="Label" set_or_get="get" property_name="Text" is_generic="false" instance_name="Label1"></mutation>
+                                <field name="COMPONENT_SELECTOR">Label1</field>
+                                <field name="PROP">Text</field>
+                              </block>
+                            </value>
+                            <value name="PIECE">
+                              <block type="text" id="vH(%*uQYQoslYMfREsi3">
+                                <field name="TEXT">Vivo</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="component_method" id="q=P]q$)bao65]C`STU])">
+                    <mutation component_type="SpeechRecognizer" method_name="GetText" is_generic="false" instance_name="Speech_Recognizer1"></mutation>
+                    <field name="COMPONENT_SELECTOR">Speech_Recognizer1</field>
+                  </block>
+                </statement>
+                <statement name="ELSE">
+                  <block type="component_method" id="W`^jl^Ks[9X@sx_w8)NF">
+                    <mutation component_type="ScSpeechRecognizer" method_name="GetText" is_generic="false" instance_name="ScSpeechRecognizer1"></mutation>
+                    <field name="COMPONENT_SELECTOR">ScSpeechRecognizer1</field>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="3%#?e0N~{YH0^xOA*;Ev" x="-1830" y="-3630">
+    <mutation component_type="Clock" is_generic="false" instance_name="Clock1" event_name="Timer"></mutation>
+    <field name="COMPONENT_SELECTOR">Clock1</field>
+    <statement name="DO">
+      <block type="component_method" id="nmPDD~jlrsWuQ(5m+UZQ">
+        <mutation component_type="PhoneCall" method_name="MakePhoneCall" is_generic="false" instance_name="Phone_Call1"></mutation>
+        <field name="COMPONENT_SELECTOR">Phone_Call1</field>
+        <next>
+          <block type="component_set_get" id="2j{p:~LJL@sMOOx9@o@!">
+            <mutation component_type="Clock" set_or_get="set" property_name="TimerEnabled" is_generic="false" instance_name="Clock1"></mutation>
+            <field name="COMPONENT_SELECTOR">Clock1</field>
+            <field name="PROP">TimerEnabled</field>
+            <value name="VALUE">
+              <block type="logic_boolean" id="p~6{qp~j9x*2Z61;*m-+">
+                <field name="BOOL">FALSE</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_method" id=".BmcGy!..8,9#D32szhm" x="-750" y="-3610">
+    <mutation component_type="ScSpeechRecognizer" method_name="GetText" is_generic="false" instance_name="ScSpeechRecognizer1"></mutation>
+    <field name="COMPONENT_SELECTOR">ScSpeechRecognizer1</field>
+  </block>
+  <block type="component_event" id=";(zaR)r8PJuso;C]vlF_" x="-1610" y="-890">
+    <mutation component_type="Image" is_generic="false" instance_name="Image2" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">Image2</field>
+    <statement name="DO">
+      <block type="component_set_get" id="ISV(AG5t]u_KKjdXVi1.">
+        <mutation component_type="ActivityStarter" set_or_get="set" property_name="Action" is_generic="false" instance_name="Activity_Starter1"></mutation>
+        <field name="COMPONENT_SELECTOR">Activity_Starter1</field>
+        <field name="PROP">Action</field>
+        <value name="VALUE">
+          <block type="text" id="yqK$anlK#y/NQ8qC3/Kc">
+            <field name="TEXT">android.intent.action.VIEW</field>
+          </block>
+        </value>
+        <next>
+          <block type="component_set_get" id="7sbIQn-KFwI%pt~bSLA-">
+            <mutation component_type="ActivityStarter" set_or_get="set" property_name="ActivityPackage" is_generic="false" instance_name="Activity_Starter1"></mutation>
+            <field name="COMPONENT_SELECTOR">Activity_Starter1</field>
+            <field name="PROP">ActivityPackage</field>
+            <value name="VALUE">
+              <block type="text" id="/+(^vx`qYS3K/-_qD0ou">
+                <field name="TEXT">com.android.chrome</field>
+              </block>
+            </value>
+            <next>
+              <block type="component_set_get" id="6Z]Eh#HgHVbE+){drV9v">
+                <mutation component_type="ActivityStarter" set_or_get="set" property_name="ActivityClass" is_generic="false" instance_name="Activity_Starter1"></mutation>
+                <field name="COMPONENT_SELECTOR">Activity_Starter1</field>
+                <field name="PROP">ActivityClass</field>
+                <value name="VALUE">
+                  <block type="text" id="eCU%tb,h`VLL@T0U3U?w">
+                    <field name="TEXT">com.google.android.apps.chrome.Main</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="component_set_get" id="h*{+VtHOBuHouBk5Vc#s">
+                    <mutation component_type="ActivityStarter" set_or_get="set" property_name="DataUri" is_generic="false" instance_name="Activity_Starter1"></mutation>
+                    <field name="COMPONENT_SELECTOR">Activity_Starter1</field>
+                    <field name="PROP">DataUri</field>
+                    <value name="VALUE">
+                      <block type="text_join" id="D}=[f?Z/pTvY%coE*MLs">
+                        <mutation items="2"></mutation>
+                        <value name="ADD0">
+                          <block type="text" id="Tj@u!gX=p*3|}yT.L2CD">
+                            <field name="TEXT">www.google.com/search?q=</field>
+                          </block>
+                        </value>
+                        <value name="ADD1">
+                          <block type="component_set_get" id="c88AhyRZriO4/pfU05Oj">
+                            <mutation component_type="SpeechRecognizer" set_or_get="get" property_name="Result" is_generic="false" instance_name="Speech_Recognizer1"></mutation>
+                            <field name="COMPONENT_SELECTOR">Speech_Recognizer1</field>
+                            <field name="PROP">Result</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="component_method" id="oW(t=:0I##2^JT=hYEGl">
+                        <mutation component_type="ActivityStarter" method_name="StartActivity" is_generic="false" instance_name="Activity_Starter1"></mutation>
+                        <field name="COMPONENT_SELECTOR">Activity_Starter1</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="EMk_cD|OPq,/l|GpR*i]" x="-910" y="-890">
+    <mutation component_type="Form" is_generic="false" instance_name="Screen1" event_name="BackPressed"></mutation>
+    <field name="COMPONENT_SELECTOR">Screen1</field>
+    <statement name="DO">
+      <block type="component_method" id="ietg9]3{---L2,(;ww.}">
+        <mutation component_type="Notifier" method_name="ShowChooseDialog" is_generic="false" instance_name="Notifier1"></mutation>
+        <field name="COMPONENT_SELECTOR">Notifier1</field>
+        <value name="ARG0">
+          <block type="text" id="LGF2==qzj7ka$uKoQ085">
+            <field name="TEXT">Do you want to close this app?</field>
+          </block>
+        </value>
+        <value name="ARG1">
+          <block type="text" id="Qb%x}VYaF6~_$2o/V[^A">
+            <field name="TEXT">Exit</field>
+          </block>
+        </value>
+        <value name="ARG2">
+          <block type="text" id="#Z4f8JZ8c_x.-Kaj|G26">
+            <field name="TEXT">Yes</field>
+          </block>
+        </value>
+        <value name="ARG3">
+          <block type="text" id="rg+`-apVT/t(Cm)S]6^g">
+            <field name="TEXT"></field>
+          </block>
+        </value>
+        <value name="ARG4">
+          <block type="logic_boolean" id="{v+Otq(?O)F5UqL7ECIZ">
+            <field name="BOOL">TRUE</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <yacodeblocks ya-version="227" language-version="32"></yacodeblocks>
+</xml>

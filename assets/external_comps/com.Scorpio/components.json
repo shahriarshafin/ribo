@@ -1,0 +1,200 @@
+[{
+ "categoryString": "EXTENSION",
+ "nonVisible": "true",
+ "iconName": "images/speechRecognizer.png",
+ "methods": [
+  {
+   "deprecated": "false",
+   "name": "GetText",
+   "description": "Solicits speech input from the user.  After the speech is converted to\n text, the AfterGettingText event will be raised.",
+   "params": []
+  },
+  {
+   "deprecated": "false",
+   "name": "StopASR",
+   "description": "Stop continuosly Recognition process",
+   "params": []
+  }
+ ],
+ "blockProperties": [
+  {
+   "rw": "read-write",
+   "deprecated": "false",
+   "name": "ContinuoslyRecognitionEnabled",
+   "description": "Continuosly Recognition (if Dialog is disable only),\ncontinues to listen to the first successful recognition.\nThe default is FALSE, One session recognition will be used",
+   "type": "boolean"
+  },
+  {
+   "rw": "read-write",
+   "deprecated": "false",
+   "name": "EnableGoogleDialog",
+   "description": "Enable Google Promt Dialog (works like a normal SpeechRecognizer component)\nThe default is FALSE,in this case, the capabilities of this component become available.",
+   "type": "boolean"
+  },
+  {
+   "rw": "read-write",
+   "deprecated": "false",
+   "name": "EnablePartialResult",
+   "description": "Allows to have intermediate recognition results when the user continues to speak.\nTriggers an event AfterPartialResults. The default is FALSE",
+   "type": "boolean"
+  },
+  {
+   "rw": "read-write",
+   "deprecated": "false",
+   "name": "ExtraLanguage",
+   "description": "Optional IETF language tag (as defined by BCP 47),\nfor example \"en-US\"",
+   "type": "text"
+  },
+  {
+   "rw": "read-write",
+   "deprecated": "false",
+   "name": "ExtraPrompt",
+   "description": "Optional text prompt to show to the user when asking them to speak\n(if Dialog is ENABLE only).To stop the prompt, leave this field empty.",
+   "type": "text"
+  },
+  {
+   "rw": "read-only",
+   "deprecated": "false",
+   "name": "IsListening",
+   "description": "Is listening at the moment. Read only",
+   "type": "boolean"
+  },
+  {
+   "rw": "read-write",
+   "deprecated": "false",
+   "name": "KeepScreenOn",
+   "description": "To keep the device's screen turned on and bright.\nThe default is FALSE",
+   "type": "boolean"
+  },
+  {
+   "rw": "read-only",
+   "deprecated": "false",
+   "name": "LastError",
+   "description": "Error of the last recognition",
+   "type": "text"
+  },
+  {
+   "rw": "read-write",
+   "deprecated": "false",
+   "name": "MuteAudio",
+   "description": "Mute audio Prompt signal (if Dialog is disable only)\nThe default is FALSE, A beep will be played at the beginning and at the end of the recognition process.",
+   "type": "boolean"
+  },
+  {
+   "rw": "read-write",
+   "deprecated": "false",
+   "name": "PreferOffLine",
+   "description": "To only use an offline speech recognition engine (Beginning with Android 6.0).\nThe default is FALSE, meaning that either network or offline recognition engines may be used",
+   "type": "boolean"
+  },
+  {
+   "rw": "read-only",
+   "deprecated": "false",
+   "name": "Result",
+   "description": "",
+   "type": "text"
+  }
+ ],
+ "helpUrl": "",
+ "type": "com.Scorpio.ScSpeechRecognizer",
+ "androidMinSdk": 7,
+ "version": "6",
+ "external": "true",
+ "showOnPalette": "true",
+ "name": "ScSpeechRecognizer",
+ "helpString": "This is an alternate version of the Voice Recognition Component<br />(by ScorpioNormal)<br />Features:<br />- Ability to disable the Google dialogue,<br />- Turn off the sound prompt signal,<br />- Continuous listening (hands free).",
+ "properties": [
+  {
+   "defaultValue": "False",
+   "name": "ContinuoslyRecognitionEnabled",
+   "editorArgs": [],
+   "editorType": "boolean"
+  },
+  {
+   "defaultValue": "False",
+   "name": "EnableGoogleDialog",
+   "editorArgs": [],
+   "editorType": "boolean"
+  },
+  {
+   "defaultValue": "False",
+   "name": "EnablePartialResult",
+   "editorArgs": [],
+   "editorType": "boolean"
+  },
+  {
+   "defaultValue": "",
+   "name": "ExtraLanguage",
+   "editorArgs": [],
+   "editorType": "string"
+  },
+  {
+   "defaultValue": "",
+   "name": "ExtraPrompt",
+   "editorArgs": [],
+   "editorType": "string"
+  },
+  {
+   "defaultValue": "False",
+   "name": "KeepScreenOn",
+   "editorArgs": [],
+   "editorType": "boolean"
+  },
+  {
+   "defaultValue": "False",
+   "name": "MuteAudio",
+   "editorArgs": [],
+   "editorType": "boolean"
+  },
+  {
+   "defaultValue": "False",
+   "name": "PreferOffLine",
+   "editorArgs": [],
+   "editorType": "boolean"
+  }
+ ],
+ "events": [
+  {
+   "deprecated": "false",
+   "name": "AfterGettingText",
+   "description": "Simple event to raise after the VoiceReco activity has returned",
+   "params": [{
+    "name": "result",
+    "type": "text"
+   }]
+  },
+  {
+   "deprecated": "false",
+   "name": "AfterPartialResults",
+   "description": "Event occurs when exist Partial Results",
+   "params": [{
+    "name": "result",
+    "type": "text"
+   }]
+  },
+  {
+   "deprecated": "false",
+   "name": "BeforeGettingText",
+   "description": "Simple event to raise when VoiceReco is invoked but before the VoiceReco\n activity is started.",
+   "params": []
+  },
+  {
+   "deprecated": "false",
+   "name": "OnError",
+   "description": "Event occurs when recognition error",
+   "params": [{
+    "name": "error",
+    "type": "text"
+   }]
+  },
+  {
+   "deprecated": "false",
+   "name": "OnRmsChanged",
+   "description": "Event occurs when Microphone input is change (0...10)",
+   "params": [{
+    "name": "rms",
+    "type": "number"
+   }]
+  }
+ ]
+}]
