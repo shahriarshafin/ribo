@@ -31,4 +31,4 @@ A voice assistant, android application that supports Bangla Language. It was cre
 
 ### If something Ribo don't understand :
 #### দুঃখিত, বুঝতে পারিনি অন্য কিছু জিজ্ঞাসা করুন
-Sorry, I didn't understand. Ask something else.
+Sorry, I didn't understand. Ask something else.( default )
