@@ -27,7 +27,7 @@ A voice assistant, android application that supports Bangla Language. It was cre
   Take a picture.
 
 - ফেইসবুক / ইনস্টাগ্রাম / গুগল...ওপেন করো<br>
-  Onen facebook / instragram / google..and more.<br>
+  Open facebook / instragram / google..and more.<br>
 
 ### If something Ribo don't understand :
 #### দুঃখিত, বুঝতে পারিনি অন্য কিছু জিজ্ঞাসা করুন
